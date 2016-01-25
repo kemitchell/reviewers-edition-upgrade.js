@@ -79,7 +79,8 @@ assert.throws(function() { upgrade('1e', '1.0.0') })
 
 # Comparison to node-semver's `satisfies`
 
-Usage is analogous to [node-semver][node-semver]'s `.satisfies(version, range)`, with two key differences:
+Usage is analogous to [node-semver][node-semver]'s `.satisfies()`, with
+three key exceptions:
 
 1. `satisfies` takes the constraint (a "sevmer range") as its second
    argument, while reviewers-edition-upgrade takes the constraint (the
@@ -87,5 +88,8 @@ Usage is analogous to [node-semver][node-semver]'s `.satisfies(version, range)`,
 
 2. node-semver uses different syntax for ranges and versions.
    reviewers-edition-upgrade uses valid reviewers editions for both arguments.
+
+3. While their syntaxes are similar, the meaning and purpose of semantic
+   versions and reviewers editions are different.
 
 [node-semver]: https://www.npmjs.com/package/semver
