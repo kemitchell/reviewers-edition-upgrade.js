@@ -40,11 +40,11 @@ function reviewersEditionUpgrade(current, proposed) {
     else {
       // ... automatically upgrade if ...
       return (
-        // ... the proposed edition is not a draft and ...
-        ( !isFinite(proposedParsed.draft ) ) &&
-        // The current correction number is less than the proposed correction
-        // number.
-        ( currentParsed.correction < proposedParsed.correction ) ) } } }
+        // ... the current correction number is less than the proposed
+        // correction number and ...
+        ( currentParsed.correction < proposedParsed.correction ) &&
+        // ... the proposed edition is not a draft.
+        ( !isFinite(proposedParsed.draft ) )) } } }
 
 function setMissingValues(parsed) {
   numbers.forEach(function(number) {
