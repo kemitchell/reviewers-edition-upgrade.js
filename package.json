@@ -1,6 +1,6 @@
 {
   "name": "reviewers-edition-upgrade",
-  "description": "decide if upgrading to a new reviewers edition is safe",
+  "description": "decide if users should automatically upgrade to a new reviewers edition",
   "version": "0.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "dependencies": {
