@@ -30,8 +30,8 @@ function reviewersEditionUpgrade(current, proposed) {
     if (isFinite(currentParsed.draft)) {
       // .. automatically upgrade if ...
       return (
-        // .. the proposed correction number is the same and ...
-        ( currentParsed.correction === proposedParsed.correction ) &&
+        // .. the proposed correction number is the same or less and ...
+        ( currentParsed.correction <= proposedParsed.correction ) &&
         // ... the current draft number is less than the proposed draft
         // number. (Editions without draft numbers have their draft
         // numbers set to `Infinity` by `setMissingValues`.

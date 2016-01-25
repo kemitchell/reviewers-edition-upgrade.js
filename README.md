@@ -37,6 +37,13 @@ new editions.
 assert(upgrade('1e1d', '1e'))
 ```
 
+Users can also automatically upgrade from drafts of new editions to
+corrections to those editions.
+
+```javascript
+assert(upgrade('1e1d', '1e2c'))
+```
+
 Users should not automatically upgrade from one update to another
 without reviewing changes.
 
