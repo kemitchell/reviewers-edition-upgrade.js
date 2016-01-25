@@ -123,3 +123,9 @@ relative to what node-semver supports. Starting editions like `1e`,
 `1e1u`, and `1e1u1c` are loosely analogous to `~1.0.0`, `~1.1.0`, and
 `~1.1.1`, respectively. Starting editions with draft numbers, like
 `1e1d`, are loosely analogous to ranges like `~1.0.0-alpha.1`.
+
+# reved
+
+This package is bundled with other functions for
+creating and manipulating reviewers editions in
+[reved](https://www.npmjs.com/packages/reved).
