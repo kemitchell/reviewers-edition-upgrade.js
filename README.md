@@ -19,57 +19,76 @@ tests use Node.js' built-in `assert` module.
 var assert = require('assert')
 ```
 
-Users should not automatically upgrade to updated editions without
-reviewing changes.
+Automatically upgrade from an edition to a correction.
 
 ```javascript
-assert(!upgrade('1e', '1e1u'))
+assert(upgrade('1e', '1e1c'))
 ```
 
-Users should not automatically upgrade to new editions without
-reviewing as a whole.
-
-```javascript
-assert(!upgrade('1e', '2e'))
-```
-
-Users can automatically upgrade from drafts of new editions to the final
-new editions.
-
-```javascript
-assert(upgrade('1e1d', '1e'))
-```
-
-Users can also automatically upgrade from drafts of new editions to
-corrections to those editions.
-
-```javascript
-assert(upgrade('1e1d', '1e2c'))
-```
-
-Users should not automatically upgrade from one update to another
-without reviewing changes.
-
-```javascript
-assert(!upgrade('1e1u', '1e2u'))
-```
-
-Users should automatically upgrade to corrections.
+Automatically upgrade from an update to a correction.
 
 ```javascript
 assert(upgrade('1e1u', '1e1u1c'))
 ```
 
-Users should not automatically upgrade to drafts of corrections.
+Automatically upgrade from a correction to another correction.
+
+```javascript
+assert(upgrade('1e1u1c', '1e1u2c'))
+```
+
+Automatically upgrade from a draft to a later draft.
+
+```javascript
+assert(upgrade('1e1d', '1e2d'))
+```
+
+Automatically upgrade from a draft to the final new edition.
+
+```javascript
+assert(upgrade('1e1d', '1e'))
+```
+
+Automatically upgrade from a draft to a correction.
+
+```javascript
+assert(upgrade('1e1d', '1e1c'))
+```
+
+Do not automatically upgrade to new editions.
+
+```javascript
+assert(!upgrade('1e', '2e'))
+```
+
+Do not automatically upgrade to updates.
+
+```javascript
+assert(!upgrade('1e', '1e1u'))
+```
+
+Do not automatically upgrade from one update to another update.
+
+```javascript
+assert(!upgrade('1e1u', '1e2u'))
+```
+
+Do not automatically upgrade to drafts of updates.
+
+```javascript
+assert(!upgrade('1e1u', '1e2u1d'))
+```
+
+Do not automatically upgrade to drafts of corrections.
 
 ```javascript
 assert(!upgrade('1e1u', '1e1u1c1d'))
 ```
 
-Users should not automatically upgrade to drafts of new updates.
+Do not automatically upgrade to drafts of new editions.
 
 ```javascript
-assert(!upgrade('1e1u', '1e2u1d'))
+assert(!upgrade('1e1u', '1e1u1c1d'))
 ```
 
 The function throws an error if it receives an invalid reviewers edition
