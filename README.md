@@ -1,7 +1,7 @@
 This npm package exports a single function. The function takes two
 [reviewers edition][reved] string arguments and returns `true` if users
 of the first argument edition should automatically upgrade to the second
-argument edition, and `false` if they should not. The function throws an
+argument edition, `false` if they should not. The function throws an
 exception if either argument is not a valid reviewers edition string.
 
 [reved]: https://npmjs.com/packages/reviewers-edition-parse
