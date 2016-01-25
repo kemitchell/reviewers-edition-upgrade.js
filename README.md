@@ -62,6 +62,14 @@ Users should not automatically upgrade to drafts of new updates.
 assert(!upgrade('1e1u', '1e2u1d'))
 ```
 
+The function throws an error if it receives an invalid reviewers edition
+string argument.
+
+```javascript
+assert.throws(function() { upgrade('1.0.0', '1e') })
+assert.throws(function() { upgrade('1e', '1.0.0') })
+```
+
 # Comparison to node-semver's `satisfies`
 
 Usage is analogous to [node-semver][node-semver]'s `.satisfies(version, range)`, with two key differences:
