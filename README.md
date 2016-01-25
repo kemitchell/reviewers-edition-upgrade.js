@@ -108,10 +108,11 @@ three key exceptions:
    argument, while reviewers-edition-upgrade takes the constraint (the
    current reviewer edition) as its first argument.
 
-2. node-semver uses different syntax for ranges and versions.
-   reviewers-edition-upgrade uses valid reviewers editions for both arguments.
+2. node-semver uses different syntax for constraints ("ranges") and
+   versions. reviewers-edition-upgrade uses valid reviewers editions for
+   both constraints and versions.
 
-3. While their syntaxes are similar, the meaning and purpose of semantic
+3. While their syntaxes are similar, the meanings and purposes of semantic
    versions and reviewers editions are different.
 
 [node-semver]: https://www.npmjs.com/package/semver
