@@ -1,0 +1,29 @@
+{
+  "name": "reviewers-edition-upgrade",
+  "description": "decide if upgrading to a new reviewers edition is safe",
+  "version": "0.0.0",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "dependencies": {
+    "reviewers-edition-parse": "^2.0.1"
+  },
+  "devDependencies": {
+    "defence-cli": "^1.0.5",
+    "replace-require-self": "^1.1.0"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "keywords": [
+    "prose",
+    "sorting",
+    "version",
+    "versioning"
+  ],
+  "license": "MIT",
+  "repository": "kemitchell/reviewers-edition-upgrade.js",
+  "scripts": {
+    "test": "defence README.md | replace-require-self | node"
+  }
+}
