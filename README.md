@@ -6,6 +6,17 @@ exception if either argument is not a valid reviewers edition string.
 
 [reved]: https://npmjs.com/packages/reviewers-edition-parse
 
+Usage is analogous to [node-semver][node-semver]'s `semver.satisfies(version, range)`, with two key differences:
+
+1. `satisfies` takes the constraint (a "sevmer range") as its second
+   argument, while reviewers-edition-upgrade takes the constraint (the
+   current reviewer edition) as its first argument.
+
+2. node-semver uses different syntax for ranges and versions.
+   reviewers-edition-upgrade uses valid reviewers editions for both arguments.
+
+[node-semver]: https://www.npmjs.com/package/semver
+
 The following examples are also the test suite for the function. The
 tests use Node.js' built-in `assert` module.
 
