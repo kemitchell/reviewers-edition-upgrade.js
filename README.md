@@ -6,6 +6,10 @@ exception if either argument is not a valid reviewers edition string.
 
 [reved]: https://npmjs.com/packages/reviewers-edition-parse
 
+```javascript
+var upgrade = require('reviewers-edition-upgrade')
+```
+
 # Examples
 
 The following examples are also the test suite for the function. The
@@ -13,7 +17,6 @@ tests use Node.js' built-in `assert` module.
 
 ```javascript
 var assert = require('assert')
-var upgrade = require('reviewers-edition-upgrade')
 ```
 
 Users should not automatically upgrade to updated editions without
