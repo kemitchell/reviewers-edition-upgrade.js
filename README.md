@@ -1,8 +1,8 @@
 This npm package exports a single function. The function takes two
-[reviewers edition][reved] string arguments and returns `true` if users
+[Reviewers Edition][reved] string arguments and returns `true` if users
 of the first argument edition should automatically upgrade to the second
 argument edition, `false` if they should not. The function throws an
-exception if either argument is not a valid reviewers edition string.
+exception if either argument is not a valid Reviewers Edition string.
 
 [reved]: https://npmjs.com/packages/reviewers-edition-parse
 
@@ -91,7 +91,7 @@ Do not automatically upgrade to drafts of new editions.
 assert(!upgrade('1e1u', '1e1u1c1d'))
 ```
 
-The function throws an error if it receives an invalid reviewers edition
+The function throws an error if it receives an invalid Reviewers Edition
 string argument.
 
 ```javascript
@@ -109,11 +109,11 @@ three key exceptions:
    current reviewer edition) as its first argument.
 
 2. node-semver uses different syntax for constraints ("ranges") and
-   versions. reviewers-edition-upgrade uses valid reviewers editions for
+   versions. reviewers-edition-upgrade uses valid Reviewers Editions for
    both constraints and versions.
 
 3. While their syntaxes are similar, the meanings and purposes of semantic
-   versions and reviewers editions are different.
+   versions and Reviewers Editions are different.
 
 [node-semver]: https://www.npmjs.com/package/semver
 
@@ -127,5 +127,5 @@ relative to what node-semver supports. Starting editions like `1e`,
 # reved
 
 This package is bundled with other functions for
-creating and manipulating reviewers editions in
+creating and manipulating Reviewers Editions in
 [reved](https://www.npmjs.com/packages/reved).

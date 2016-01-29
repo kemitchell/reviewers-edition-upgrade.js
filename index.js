@@ -4,14 +4,14 @@ var parse = require('reviewers-edition-parse')
 var numbers = require('reviewers-edition-parse/numbers')
 
 function reviewersEditionUpgrade(current, proposed) {
-  // Parse reviewers edition strings to structured data.
+  // Parse Reviewers Edition strings to structured data.
   var currentParsed = parse(current)
   var proposedParsed = parse(proposed)
   // Throw errors if either argument was invalid.
   if (!currentParsed) {
-    throw new Error('Invalid reviewers edition: "' + current + '"') }
+    throw new Error('Invalid Reviewers Edition: "' + current + '"') }
   if (!proposedParsed) {
-    throw new Error('Invalid reviewers edition: "' + proposed + '"') }
+    throw new Error('Invalid Reviewers Edition: "' + proposed + '"') }
   // Set any missing edition numbers to placeholder values.
   setMissingValues(currentParsed)
   setMissingValues(proposedParsed)
