@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "defence-cli": "^1.0.5",
-    "replace-require-self": "^1.1.0"
+    "replace-require-self": "^1.1.0",
+    "standard": "^8.0.0"
   },
   "files": [
     "LICENSE",
@@ -24,6 +25,7 @@
   "license": "MIT",
   "repository": "kemitchell/reviewers-edition-upgrade.js",
   "scripts": {
-    "test": "defence README.md | replace-require-self | node"
+    "test": "defence README.md | replace-require-self | node",
+    "lint": "standard"
   }
 }

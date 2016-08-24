@@ -95,8 +95,13 @@ The function throws an error if it receives an invalid Reviewers Edition
 string argument.
 
 ```javascript
-assert.throws(function() { upgrade('1.0.0', '1e') })
-assert.throws(function() { upgrade('1e', '1.0.0') })
+assert.throws(function() {
+  upgrade('1.0.0', '1e')
+})
+
+assert.throws(function() {
+  upgrade('1e', '1.0.0')
+})
 ```
 
 # Comparison to node-semver's `satisfies`
